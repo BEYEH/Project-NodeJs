@@ -1,10 +1,12 @@
-var fs = require("fs");
+import { writeFile } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-fs.writeFile(
-  "./tutorial_6_file_system/mynewfile3.txt",
-  "Hello content!",
-  function (err) {
-    if (err) throw err;
-    console.log("Saved!");
-  }
-);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const filepath = join(__dirname, "mynewfile3.txt");
+
+writeFile(filepath, "Hello content!", function (err) {
+  if (err) throw err;
+  console.log("Saved!");
+});
