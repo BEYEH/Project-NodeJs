@@ -26,6 +26,24 @@
     "type": "module"
   }
   ```
+- [Does ES6 import/export need ".js" extension?](https://stackoverflow.com/questions/44481851/does-es6-import-export-need-js-extension)
+  ```
+  No, modules don't care about extensions. 
+  It just needs to be a name that resolves to a source file.
+
+  In your case, http://localhost/bla/src/drawImage is not a file
+  while http://localhost/bla/src/drawImage.js is,
+  so that's where there error comes from.
+  ```
+
+- [__dirname is not defined error in Node 14 version](https://stackoverflow.com/questions/64383909/dirname-is-not-defined-error-in-node-14-version)
+  ```js
+  import { fileURLToPath } from 'url';
+  import { dirname } from 'path';
+
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
+  ```
 
 
 ## Install package by using NPM.
