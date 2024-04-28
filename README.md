@@ -8,3 +8,10 @@
   ```
   '/avatar/myFile.png' -> __dirname + '/avatar/myFile.png' 
   ```
+- [Code Runner in VSCode is running in output instead of CMD in the Terminal](https://stackoverflow.com/questions/63148583/code-runner-in-vscode-is-running-in-output-instead-of-cmd-in-the-terminal)
+  ```
+  1. Install the extension Code Runner  in the VSCode.
+  2. Go to File -> Preferences -> Settings
+  3. search "code-runner:Run In Terminal"
+  4. Enable "Whether to run code in Integrated Terminal" option.
+  ```
