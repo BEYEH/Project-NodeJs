@@ -15,3 +15,18 @@
   3. search "code-runner:Run In Terminal"
   4. Enable "Whether to run code in Integrated Terminal" option.
   ```
+- [package.json "type" field](https://nodejs.org/docs/latest-v13.x/api/esm.html#esm_package_json_type_field)
+  ```js
+  // package.json
+  {
+    "dependencies": {
+      "upper-case": "^3.0.0"
+    },
+
+    "type": "module"
+  }
+  ```
+
+
+## Install package by using NPM.
+- $npm install upper-case
