@@ -59,3 +59,4 @@
 - $npm install formidable
 - $npm install nodemailer
 - $npm install mysql
+- $npm install mongodb
