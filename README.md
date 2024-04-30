@@ -50,3 +50,4 @@
 - $npm install upper-case
 - $npm install formidable
 - $npm install nodemailer
+- $npm install mysql
