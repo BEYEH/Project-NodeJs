@@ -49,3 +49,4 @@
 ## Install package by using NPM.
 - $npm install upper-case
 - $npm install formidable
+- $npm install nodemailer
