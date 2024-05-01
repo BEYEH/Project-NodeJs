@@ -65,3 +65,11 @@
 ## Tools
 - [MongoDB Community Server Download](https://www.mongodb.com/try/download/community)
   - Include MongoDB server, mongosh, MongoDB compass (GUI).
+
+## Terminology
+| RDBMS | MongoDB |
+| ----- | ------- |
+| Database | Database |
+| Table | Collection |
+| Row | Document |
+| Column | Field |
