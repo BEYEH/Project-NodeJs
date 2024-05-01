@@ -60,3 +60,8 @@
 - $npm install nodemailer
 - $npm install mysql
 - $npm install mongodb
+- $npm install mongoose
+
+## Tools
+- [MongoDB Community Server Download](https://www.mongodb.com/try/download/community)
+  - Include MongoDB server, mongosh, MongoDB compass (GUI).
