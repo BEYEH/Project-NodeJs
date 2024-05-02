@@ -17,10 +17,15 @@ const connectToDb = async () => {
 
 const checkCollection = async () => {
   console.log("checkCollection...");
+
   const collections = await mongoose.connection.db.listCollections().toArray();
+  // collections.forEach(function (entry) {
+  //   console.log(entry);
+  // });
   const collectionExists = collections.some(
     (coll) => coll.name === COLL_CUSTOMERS
   );
+
   return collectionExists;
 };
 
@@ -37,11 +42,14 @@ const disconnectFromServer = () => {
     });
 };
 
-const findAllDatas = async () => {
-  console.log("finding all datas ...");
-  var dbo = mongoose.connection;
-  // Return all datas in collection.
-  const datas = await dbo.collection(COLL_CUSTOMERS).find({}).toArray();
+const queryData = async () => {
+  console.log("query data ...");
+  var query = { address: /^S/ };
+  const datas = await mongoose.connection
+    .collection(COLL_CUSTOMERS)
+    .find(query)
+    .toArray();
+  console.log(datas);
   return datas;
 };
 
@@ -50,9 +58,8 @@ const main = async () => {
     await connectToDb();
     var collectionExists = checkCollection();
     if (collectionExists) {
-      var datas = await findAllDatas();
+      await queryData();
     }
-    console.log(datas);
     disconnectFromServer();
   } catch (err) {
     console.error(err);

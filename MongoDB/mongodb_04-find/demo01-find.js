@@ -19,9 +19,6 @@ const checkCollection = async () => {
   console.log("checkCollection...");
 
   const collections = await mongoose.connection.db.listCollections().toArray();
-  collections.forEach(function (entry) {
-    console.log(entry);
-  });
   const collectionExists = collections.some(
     (coll) => coll.name === COLL_CUSTOMERS
   );
